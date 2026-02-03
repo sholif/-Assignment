@@ -1,4 +1,5 @@
-import 'package:assignment/splalsh/controller/splash_controller.dart';
+import 'package:assignment/features/home/controller/home_controller.dart';
+import 'package:assignment/features/home/data/repo/home_repo.dart';
 import 'package:assignment/utills/app_constants.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
@@ -18,7 +19,7 @@ Future<void> init() async {
   sl.registerLazySingleton(() => DioClient(AppConstants.baseUrl, sl(), loggingInterceptor: sl(), sharedPreferences: sl()));
 
   /// Repository
-  // sl.registerLazySingleton(() => AuthRepo(dioClient: sl()));
+  sl.registerLazySingleton(() => HomeRepo(dioClient: sl(), sharedPreferencesClass:sl()));
 
 
 
@@ -31,8 +32,7 @@ Future<void> init() async {
 
 /// Controller
   /// Auth controller
-  Get.lazyPut(() => SplashController(),fenix: true);
-  // Get.lazyPut(() => AuthController(dioClient: sl(), authRepo: sl(),),fenix: true);
+  Get.lazyPut(() => HomeController(dioClient: sl(), homeRepo: sl(), sharedPreferencesClass: sl(),),fenix: true);
   // Get.lazyPut(() => OtpVerificationController(dioClient: sl(), otpVerificationRepo: sl(),),fenix: true);
 
 

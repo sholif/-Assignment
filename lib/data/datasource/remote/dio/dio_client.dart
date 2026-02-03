@@ -68,7 +68,7 @@ class DioClient{
     CancelToken? cancelToken,
     ProgressCallback? onReceiveProgress,}) async {
     try {
-      await updateHeader();
+      //await updateHeader();
       var response = await dio!.get(
         uri,
         queryParameters: queryParameters,

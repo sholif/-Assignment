@@ -16,5 +16,10 @@ class ApiResponse {
 
   ApiResponse.withSuccess(Response responseValue)
       : response = responseValue,
-        message = responseValue.data["message"];
+        message = null;
+
+
+// ApiResponse.withSuccess(Response responseValue)
+  //     : response = responseValue,
+  //       message = responseValue.data["message"];
 }

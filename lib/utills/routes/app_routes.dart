@@ -1,8 +1,8 @@
 
+import 'package:assignment/features/home/view/screen/home_screen.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-import '../../splalsh/view/screen/splash_screen.dart';
 
 class AppRoutes {
   static int duration = 300;
@@ -10,7 +10,7 @@ class AppRoutes {
   static final appRoutes = [
 
 
-    //defaultTransitionPage(name: SplashScreen.routeName, page: () => SplashScreen()),
+    defaultTransitionPage(name:HomeScreen.routeName, page: () => HomeScreen()),
 
 
     // dynamicArgumentPage(
@@ -22,8 +22,6 @@ class AppRoutes {
     //dynamicArgumentPage(name: DailyQuotesScreen.routeName, pageBuilder: (args) => DailyQuotesScreen(quotesId: args),),
 
 
-    // If you want no transition at all
-    GetPage(name: SplashScreen.routeName, page: () => SplashScreen()),
   ];
 }
 
