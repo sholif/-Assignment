@@ -1,0 +1,70 @@
+name: assignment
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.6.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  get_it: ^7.7.0
+  dio:
+  mime: ^2.0.0
+
+  shared_preferences: ^2.3.0
+  connectivity_plus: ^6.0.5
+  get: ^4.6.6
+  flutter_svg: ^2.1.0
+  image_picker: ^1.1.2
+  permission_handler: ^11.3.0
+  intl: ^0.20.2
+  file_picker: ^10.2.0
+  path_provider: ^2.1.2
+  shimmer: ^3.0.0
+  flutter_screenutil:
+
+
+
+
+
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/lanucher_icon.jpg"
+  min_sdk_android: 21
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+    - assets/audio/
+
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/manrope-regular.otf
+        - asset: assets/fonts/manrope-medium.otf
+        - asset: assets/fonts/manrope-semibold.otf
+        - asset: assets/fonts/manrope-bold.otf
+
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/manrope-regular.otf
