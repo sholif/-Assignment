@@ -1,3 +1,6 @@
+
+import 'package:assignment/features/home/view/screen/home_screen.dart';
+import 'package:assignment/utills/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,7 +15,6 @@ void main() async {
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp]
   );
-
 
   await di.init();
 
@@ -37,8 +39,9 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
 
-           // initialRoute: SplashScreen.routeName,
-           // getPages: AppRoutes.appRoutes,
+           initialRoute: HomeScreen.routeName,
+           getPages: AppRoutes.appRoutes,
+
 
         );
       },
